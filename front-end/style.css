@@ -15,13 +15,6 @@ footer {
   padding: 25px;
 }
 
-.img-responsive {
-    width: 100%;
-    height: 170px;
-}
-  border-radius: 10px;
-
-}
 .items{
   border: solid;
   border-radius: 10px;
@@ -30,4 +23,28 @@ footer {
 .elementMain{
   display: flex;
   flex-wrap: wrap;
+}
+
+.card-nounours{
+  border: solid;
+  height: 270px;
+  margin-top: 30px;
+}
+
+.footer-nounours{
+  border: solid 2px blue;
+}
+
+.nounours{
+  height: 200px;
+  width: 100%;
+  object-fit: fit;
+
+}
+.cardProducts{
+  border: solid;
+  text-align: center;
+}
+ul{
+  list-style: none;
 }

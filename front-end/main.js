@@ -10,21 +10,16 @@ function displayElement(item) {
     let txt = document.querySelector(".elementMain");
     txt.innerHTML += `
     <div class="col-sm-4">
-        <div class="panel panel-primary">
-            <div class="panel-heading"></div>
-                <div class="panel-body"> 
-                   <img src="${item.imageUrl}" class="img-responsive" alt="Image"/>
-                </div>
-                <div class="panel-footer">
+        <a href="products.html?${item._id}">
+            <div class="card-nounours">
+                <img src="${item.imageUrl}" class="nounours" alt="Image"/>
+                <div class="footer-nounours">
                     <p class="name"> ${item.nom}</p>
-                    <p class="price"> ${item.price} </p></div>
+                    <p class="price"> ${item.price / 100} </p></div>
                 </div>
             </div>
-        </div>
-            
-      
-    
-            
-
+        </a>
+    </div>
     `;
 }
+
