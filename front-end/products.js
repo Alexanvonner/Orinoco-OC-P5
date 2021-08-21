@@ -1,14 +1,30 @@
+
+
 // récuperation de la chaîne de requete dans l'url
 
 const queryString_url_id = window.location.search;
-console.log(queryString_url_id)
-//méthode pour extraire l'id
 
-const leId = queryString_url_id.slice(1);
 
+
+//méthode pour extraire l'id sans le 1er caractere FACILEMENT
+const leId = queryString_url_id.slice(4);
 console.log(leId);
 
 
+
+
+
+// contact Api pour recuperer les information ID
+const getTeddies = async function(){
+    let response = await fetch('http://localhost:3000/api/teddies/'+ leId)
+    .then(response => response.json())
+    .then((items) => {
+        let teddies = items;
+        console.log(teddies);
+    })
+}
+
+getTeddies();
 // selectionner l'id dans lequel je vais injecter du code via innerHtml
 
 const elementProducts = document.querySelector(".container_Page_Products");
@@ -17,7 +33,7 @@ elementProducts.innerHTML += `
 <div class="cardProducts">
                 <img src="" alt=""/>
                 <ul>
-                  <li>nom produits :  </li>
+                  <li>nom produits : </li>
                   <li>description : </li>
                   <li>option 1 : </li>
                   <li>option 2 : </li>

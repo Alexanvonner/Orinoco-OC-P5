@@ -10,7 +10,7 @@ function displayElement(item) {
     let txt = document.querySelector(".elementMain");
     txt.innerHTML += `
     <div class="col-sm-4">
-        <a href="products.html?${item._id}">
+        <a href="products.html?id=${item._id}">
             <div class="card-nounours">
                 <img src="${item.imageUrl}" class="nounours" alt="Image"/>
                 <div class="footer-nounours">
